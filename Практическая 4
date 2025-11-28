@@ -418,5 +418,34 @@ elif last_digit >= 3:
     print(f"Последняя цифра >= 3. Результат (число^2): {result}")
 Вариант 8
 #1
+password = input("Введите пароль: ")
+if len(password) < 8 or password == "qwerty123":
+    print(False)
+else:
+    print(True)
+#2
+pc_number = 777
+user_num1 = float(input("Введите первое число: "))
+user_num2 = float(input("Введите второе число: "))
+condition1 = (user_num1 < pc_number and user_num2 > pc_number)
+condition2 = (user_num2 < pc_number and user_num1 > pc_number)
+if condition1 or condition2:
+    print(True)
+else:
+    print(False)
+#3
+lamp_1 = 0
+lamp_2 = 0
+user_choice = input("Какую лампочку зажечь? (Введите '1' или '2'): ")
+if user_choice == "1":
+    lamp_1 = 1
+    print(f"Лампочка 1 зажжена. Статус: lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+elif user_choice == "2":
+    lamp_2 = 1
+    print(f"Лампочка 2 зажжена. Статус: lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+else:
+    print("Обе лампочки не горят.")
+    print(f"Статус: lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+
 
         
