@@ -319,5 +319,15 @@ else:
     print(f"Числа равны ({num1} и {num2}). Их сумма: {result}")
     print("Ошибка ввода. Пожалуйста, введите корректные числа.")
 #2
+new_message = "Hello! How are you?"
+response = input("Введите ваш ответ на сообщение 'Hello! How are you?': ")
+if new_message and response:
+    if new_message[0] == response[0]:
+        print(True)
+    else:
+        print(False)
+else:
+    print("Одна из строк пуста, сравнение невозможно.")
+#3
 
 
