@@ -381,3 +381,26 @@ elif num2 < 0:
         print(f"Второе число (отрицательное) скорректировано: {num2}")
 Вариант 7
 #1
+str = input("Введите произвольную строку: ")
+target_chars = ['я', 'и', 'е', 'ю']
+if len(str) > 0:
+    last_char = str[-1]
+    if last_char in target_chars:
+        print(True)
+    else:
+        print(False)
+else:
+    print(False)
+#2
+a = float(input("Введите длину первой стороны (a): "))
+b = float(input("Введите длину второй стороны (b): "))
+c = float(input("Введите длину третьей стороны (c): "))
+positive_sides = (a > 0) and (b > 0) and (c > 0)
+triangle_inequality = (a + b > c) and (a + c > b) and (b + c > a)
+if positive_sides and triangle_inequality:
+    print(True)
+else:
+    print(False)
+#3
+
+        
