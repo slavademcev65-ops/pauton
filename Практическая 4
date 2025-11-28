@@ -402,5 +402,21 @@ if positive_sides and triangle_inequality:
 else:
     print(False)
 #3
+number = int(input("Введите целое число: "))
+last_digit = number % 10
+if last_digit == 0:
+    result = number ** 10
+    print(f"Последняя цифра 0. Результат (число^10): {result}")
+elif last_digit == 1:
+    result = number % 3
+    print(f"Последняя цифра 1. Результат (число % 3): {result}")
+elif last_digit == 2:
+    result = number // 2
+    print(f"Последняя цифра 2. Результат (число // 2): {result}")
+elif last_digit >= 3:
+    result = number ** 2
+    print(f"Последняя цифра >= 3. Результат (число^2): {result}")
+Вариант 8
+#1
 
         
