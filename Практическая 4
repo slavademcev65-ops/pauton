@@ -329,5 +329,18 @@ if new_message and response:
 else:
     print("Одна из строк пуста, сравнение невозможно.")
 #3
-
+length1 = float(input("Введите длину первого отрезка: "))
+length2 = float(input("Введите длину второго отрезка: "))
+if length1 > length2:
+    difference = length1 - length2
+    print(f"Первый отрезок длиннее второго на {difference} единиц.")
+elif length2 > length1:
+    difference = length2 - length1
+    print(f"Второй отрезок длиннее первого на {difference} единиц.")
+elif length1 == length2:
+    print("Отрезки равны по длине.")
+else:
+    print("Ошибка ввода. Пожалуйста, введите корректные числа.")
+Вариан 6
+#1
 
