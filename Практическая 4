@@ -447,5 +447,115 @@ else:
     print("Обе лампочки не горят.")
     print(f"Статус: lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
 
-
-        
+Вариант 9
+#1
+switch_1 = False  
+switch_2 = False  
+response = input("Включить? (да/нет): ")  
+if response.lower() == "да":  
+    switch_1 = True  
+    switch_2 = True  
+    print("Всё включено")  
+    print(f"switch_1 = {switch_1}")  
+    print(f"switch_2 = {switch_2}")  
+else:  
+    print(f"switch_1 = {switch_1}")  
+    print(f"switch_2 = {switch_2}")  
+#2
+number = int(input("Введите число: "))  
+if number > 0:  
+    if number % 2 == 0:  
+        print(True, "even")  
+    else:  
+        print(True, "odd")  
+else:  
+    print(False)  
+#3
+text = input("Введите строку: ")  
+if text.startswith('/'):  
+    print("command")  
+else:  
+    print("It's string")
+Вариант 10
+#1
+def check_string_length(s):  
+    if len(s) == 0:  
+        return None  
+    elif len(s) <= 5:  
+        return "short"  
+    elif 6 <= len(s) <= 10:  
+        return "normal"  
+    else:  
+        return "long" 
+#2
+number = int(input("Введите целое число: "))  
+if number < 0:  
+    number = 1_000_000  
+    print(f"Число отрицательное, присвоено значение: {number}")  
+elif number == 0:  
+    number = 2**2  
+    print(f"Число равно нулю, присвоено значение: {number}")  
+else:  
+    number = number**3  
+    print(f"Число положительное, результат возведения в куб: {number}") 
+#3
+number_1 = 10  
+number_2 = 100  
+user_number = float(input("Введите число: "))  
+if number_1 < user_number < number_2:  
+    print(True)  
+else:  
+    print(False)
+Вариант 11
+#1
+prog_num = 0  
+num1 = float(input("Введите первое число: "))  
+num2 = float(input("Введите второе число: "))   
+if num1 < 0 and num2 < 0:  
+    prog_num = num1 + num2  
+    print("Оба числа отрицательные. Результат:", prog_num)  
+elif num1 > 0 and num2 > 0:  
+    prog_num = num1 - num2  
+    print("Оба числа положительные. Результат:", prog_num)  
+else:  
+    print("False")
+#2
+number = int(input("Введите число: "))  
+if number % 2 != 0:
+    print(number + 1)
+else:  
+    print(True)
+#3
+text = input("Введите строку: ")  
+if len(text) > 10:  
+    print(text[:5])  
+else:   
+    print(text)
+Вариант 12
+#1
+def check_letter(letter):  
+    ru = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'  
+    en = 'abcdefghijklmnopqrstuvwxyz'    
+    letter = letter.lower()  
+    if letter in ru:  
+        return 'rus'  
+    elif letter in en:  
+        return 'eng'  
+    else:  
+        return None 
+#2
+pc_num = 10  
+user_num = int(input("Введите число: "))  
+if user_num == pc_num or user_num == pc_num + 1 or user_num == pc_num - 1:  
+    print(True)  
+else:  
+    print(False)  
+#3
+correct_answer = (221 - 13) * 2  
+user_answer = int(input("Введите ваш ответ: "))  
+if user_answer == correct_answer:  
+    print(True)  
+elif user_answer > correct_answer:  
+    print(">")  
+else:  
+    print("<") 
