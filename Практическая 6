@@ -1,0 +1,20 @@
+Задание 1
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]  
+# Вывод всех элементов  
+print("Все элементы матрицы:")  
+for row in matrix:  
+    print(row)  
+odd_numbers =   
+even_count = 0  
+for row in matrix:  
+    for num in row:  
+        if num % 2 != 0:
+            odd_numbers.append(num)  
+        else:  
+            even_count += 1  
+print("\nНечётные числа:", odd_numbers)  
+print("Количество чётных чисел:", even_count)  
+
+Задание 2
+
