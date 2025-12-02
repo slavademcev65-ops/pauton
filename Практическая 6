@@ -18,3 +18,53 @@ print("Количество чётных чисел:", even_count)
 
 Задание 2
 
+matrix_1 = [[2, 4, 3, 6], [5, 7, 1, 5]]
+matrix_2 = [[2, 9, 0, 2], [3, 4, 7, 6]]
+num_rows = len(matrix_1)
+num_cols = len(matrix_1[0])
+answer_matrix = [[0 for _ in range(num_cols)] for _ in range(num_rows)]
+print(f"Пустая answer_matrix: {answer_matrix}\n")
+for i in range(num_rows):
+    for j in range(num_cols):
+        answer_matrix[i][j] = matrix_1[i][j] * matrix_2[i][j]
+print(f"Результат перемножения (консоль): {answer_matrix}\n")
+print("Суммы элементов для каждой строки:")
+for i in range(num_rows):
+    row_sum = sum(answer_matrix[i])
+    print(f"Строка {i+1}: {row_sum}")
+
+Задание 3
+
+fruits = [['Banana', 'apple'], ['apricot', 'Avocado'], ['lime', 'lemon'], ['Mango', 'grapes']]  
+capitalized_fruits =   
+for sublist in fruits:  
+    for fruit in sublist:  
+        if fruit.isupper():  
+            capitalized_fruits.append(fruit) 
+print(capitalized_fruits)  
+
+Задание 4
+
+random_elements = [['toy', 'bee', 'cheese', 'ear'],   
+                   [False, 'word', '0110110', 10],   
+                   ['happiness', '(」°ロ°)」', 'luck', None],   
+                   ['car', '<- code ->', 4.7, True]]    
+for row_index, row in enumerate(random_elements):  
+    for element_index, element in enumerate(row):   
+        if element_index % 2 == 1:  
+            print(f"Строка {row_index + 1}, элемент {element_index + 1}: {element}")  
+
+Задание 5
+ 
+rows = int(input("Введите количество строк матрицы: "))   
+cols = int(input("Введите количество столбцов матрицы: "))  
+matrix =   
+for i in range(rows):  
+    row =   
+    for j in range(cols):  
+        num = float(input(f"Введите элемент [{i+1}][{j+1}]: "))  
+        row.append(num)   
+    matrix.append(row)  
+print("\nСозданная матрица:")  
+for row in matrix:  
+    print(row)  
