@@ -1,0 +1,66 @@
+Задание 1
+
+m = ['круг', 0.25, 'квадрат', 'треугольник', 15, 'круг', 'овал', '10']
+items_to_remove = [item for item in m if not isinstance(item, str)] 
+for item in items_to_remove:
+if item in m:
+        m.remove(item)
+if '10' in m:
+    m.remove('10')
+print(m)
+Задание 2
+
+abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G']  
+del abc[1:5]  
+print(abc)  
+Задание 3
+
+numbers = [1, 4]  
+numbers.insert(1, 2)   
+numbers.insert(3, 3)  
+print(numbers)  # Вывод: [1, 2, 3, 4]  
+
+Задание 4
+
+mass = [14, -6, 3, 11, 6, 8.5, 99, -20, -6, 10, 40, 0.25, -4, 5]
+positive_mass = [num for num in mass if num >= 0]
+positive_mass.sort()
+descending_mass = sorted(positive_mass, reverse=True)
+print(positive_mass)
+print(descending_mass)
+
+Задание 5
+
+negative_list = []
+positive_list = []
+zeros_list = []
+try:
+    count = int(input("Введите количество вводимых чисел: "))
+except ValueError:
+    print("Ошибка: Введите целое число.")
+    exit()
+print(f"Введите {count} чисел (можно через пробел или по одному):")
+for _ in range(count):
+    try:
+        num = float(input())
+        if num < 0:
+            negative_list.append(num)
+        elif num > 0:
+            positive_list.append(num)
+        else:
+            zeros_list.append(num)
+    except ValueError:
+        print("Ошибка: Введено некорректное число. Пропускаем ввод.")
+        continue
+sum_negatives = sum(negative_list)
+print(f"\nСумма отрицательных чисел: {sum_negatives}")
+if positive_list:
+    average_positives = sum(positive_list) / len(positive_list)
+    print(f"Среднее арифметическое положительных чисел: {average_positives:.2f}")
+else:
+    print("В списке положительных чисел нет элементов, среднее арифметическое не вычислялось.")
+starred_zeros_list = ['*' for _ in zeros_list]
+
+print(f"\nСписок нулей (обработанный):")
+print(f"Количество элементов: {len(starred_zeros_list)}")
+print(f"Элементы списка: {starred_zeros_list}")
