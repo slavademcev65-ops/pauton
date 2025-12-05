@@ -1,0 +1,89 @@
+Задание 1
+table_data = [
+    ['folder', 'coursework.doc', 'folder', 'pict.png', 'data.accdb'],
+    ['icon.ico', 'script.js', 'index.html', 'style.css', 'prog.py'],
+    ['my_song.mp3', 'anapa-2003.jpg', 'cs_1.6.exe', 'folder', 'cheat.txt'],
+    ['notes.txt', 'main.py', 'work.pdf', 'cartoon.mp4', 'array.py'],
+    ['project.psd', 'cycle.py', 'folder', 'cycle.js', 'turtle.py']
+]
+print("--- 1. Вывод всего двумерного массива ---")
+for row in table_data:
+    print(row)
+print("\n--- 2. Удаление 'folder' и замена 'data.accdb' на 'data.sql' ---")
+for r_index, row in enumerate(table_data):
+    for c_index, item in enumerate(row):
+        if item == 'folder':
+            table_data[r_index][c_index] = ''
+        elif item == 'data.accdb':
+            table_data[r_index][c_index] = 'data.sql'
+for row in table_data:
+    print(row)
+print("\n--- 3. Вывод всех элементов с расширением .py (в новом списке) ---")
+py_files_list = []
+for row in table_data:
+    for item in row:
+        if item.endswith('.py'):
+            py_files_list.append(item)
+print(f"Список файлов .py: {py_files_list}")
+print("\n--- 4. Вывод всех элементов с расширением .js (с добавлением 'new_') ---")
+js_files_list = []
+for row in table_data:
+    for item in row:
+        if item.endswith('.js'):
+            js_files_list.append("new_" + item)
+print(f"Список файлов .js: {js_files_list}")
+
+Задание 2 
+word_numb = ["ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]  
+try:  
+    n = int(input("Введите число от 0 до 9: "))  
+    if 0 <= n <= 9:  
+        print(word_numb[0:n+1])  
+    else:  
+        print('Введите число <= 9')  
+except 
+bin_sy = ['11011111', '11011101', '11000111', '11011100', '11011110']  
+dec_sy =   
+for binary in bin_sy:  
+    decimal = int(binary, 2)
+    dec_sy.append(decimal)  
+    print(f"Двоичное число {binary} в десятичной системе: {decimal}")  
+max_value = max(dec_sy)  
+min_value = min(dec_sy)    
+print(f"\nМаксимальное число: {max_value}")  
+print(f"Минимальное число: {min_value}")  
+nt('Введите корректное число')   
+
+Задание 3
+
+bin_sy = ['11011111', '11011101', '11000111', '11011100', '11011110']  
+dec_sy =   
+for bin_num in bin_sy:  
+    dec_num = int(bin_num,
+    dec_sy.append(dec_num)  
+    print(f"Двоичное число {bin_num} в десятичной системе: {dec_num}")    
+max_num = max(dec_sy)  
+min_num = min(dec_sy)  
+print(f"\nМаксимальное число: {max_num}")  
+print(f"Минимальное число: {min_num}")
+
+Задание 4
+A = [  
+    [-446, 281, -804],  
+    [65, 432, -122],  
+    [13, "error", 8]  
+]  
+rows = len(A)  
+cols = len(A)  
+for i, row in enumerate(A):  
+    for j, element in enumerate(row):  
+        if isinstance(element, str):   
+            A[i][j] = len(element)    
+print("Исправленная матрица:")  
+for row in A:  
+    print(row) 
+
+Задание 5
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+sum_anti_diagonal = matrix[0][2] + matrix[1][1] + matrix[2][0]
