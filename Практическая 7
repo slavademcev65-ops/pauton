@@ -59,7 +59,7 @@ nt('Введите корректное число')
 bin_sy = ['11011111', '11011101', '11000111', '11011100', '11011110']  
 dec_sy =   
 for bin_num in bin_sy:  
-    dec_num = int(bin_num,
+    dec_num = int(bin_num)
     dec_sy.append(dec_num)  
     print(f"Двоичное число {bin_num} в десятичной системе: {dec_num}")    
 max_num = max(dec_sy)  
