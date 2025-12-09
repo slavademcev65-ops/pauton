@@ -35,24 +35,25 @@ for i in range(num_rows):
 
 Задание 3
 
-fruits = [['Banana', 'apple'], ['apricot', 'Avocado'], ['lime', 'lemon'], ['Mango', 'grapes']]  
-capitalized_fruits =   
-for sublist in fruits:  
-    for fruit in sublist:  
-        if fruit.isupper():  
-            capitalized_fruits.append(fruit) 
-print(capitalized_fruits)  
+fruits = [['Banana', 'apple'], ['apricot', 'Avocado'],
+          ['lime', 'lemon'], ['Mango', 'grapes']]
+for row in fruits:
+    for fruit in row:
+        if fruit and fruit[0].isupper():
+            print(fruit 
 
 Задание 4
 
-random_elements = [['toy', 'bee', 'cheese', 'ear'],   
-                   [False, 'word', '0110110', 10],   
-                   ['happiness', '(」°ロ°)」', 'luck', None],   
-                   ['car', '<- code ->', 4.7, True]]    
-for row_index, row in enumerate(random_elements):  
-    for element_index, element in enumerate(row):   
-        if element_index % 2 == 1:  
-            print(f"Строка {row_index + 1}, элемент {element_index + 1}: {element}")  
+random_elements = [
+    ['toy', 'bee', 'cheese', 'ear'],
+    [False, 'word', '0110110', 10],
+    ['happiness', '(」゜□゜)」', 'luck', None],
+    ['car', '<code>', 4.7, True]
+]
+for row_index, row in enumerate(random_elements):
+    for col_index, element in enumerate(row):
+        if col_index % 2 == 1:
+            print(f"Строка {row_index}, индекс {col_index}: {element}")  
 
 Задание 5
  
