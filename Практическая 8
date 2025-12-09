@@ -1,1 +1,51 @@
 Задание 1
+
+print("Исходный словарь:")  
+print(my_dict)  
+del my_dict [3]  
+# Выводим словарь после удаления  
+print("\nСловарь после удаления шестнадцатеричного значения:")  
+print(my_dict)  
+my_dict = '0100101' [10]  
+# Выводим итоговый словарь  
+print("\nИтоговый словарь после добавления нового значения:")  
+print(my_dict)
+
+Задание 2
+
+sl = {'</>': 13, 'script': 1, '__init__': 10, 'self': 5, 'number_9': 6, '#comment': 100}   
+print("Исходный словарь:")  
+print(sl)   
+key = input("\nВведите ключ для нового элемента: ")  
+value = input("Введите значение для нового элемента: ")    
+try:  
+    value = int(value)  
+except ValueError:  
+    pass    
+sl[key] = value  
+print("\nОбновленный словарь:")  
+print(sl)  
+
+Задание 3
+
+my_dict = {}   
+while len(my_dict) < 3:  
+    try:   
+        key = input("Введите числовой ключ: ")  
+        key = float(key)  # Попытка преобразовать в число   
+        if key in my_dict:  
+            print("Такой ключ уже существует. Попробуйте другой.")  
+            continue    
+        value = input("Введите значение: ")  
+        my_dict[key] = value    
+        print("Текущий словарь:", my_dict)      
+    except ValueError:  
+        print("Ошибка! Ключ должен быть числом. Попробуйте еще раз.")  
+
+Задание 4
+
+all_d = {1:15, 4:80, 44:0, 256:15, 100:70, 101:70, 20:44, 3:9}
+keys = ['1', '101', '3']
+for key in keys:
+    all_d.pop(key, None)
+print(all_d)
