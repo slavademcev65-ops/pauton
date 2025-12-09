@@ -1,2 +1,66 @@
 Задание 1 
 
+def upper(t):  
+    result = ''  
+    for char in t:  
+        if char.isupper():  
+            result += char  
+    return result    
+print(upper('Привет'))
+
+Задание 2
+
+def punct(txt):   
+    punctuation_marks = {'!', '?', '.', ',', '(', ')'}   
+    count = sum(1 for char in txt if char in punctuation_marks)  
+    return count   
+print(punct('(Как дела?)')) 
+
+Задание 3
+
+def create_cube(x, y):    
+    line = '*' * x  
+    for _ in range(y):  
+        print(line)    
+create_cube(5, 3)   
+
+Задание 4
+
+def double(text):  
+    """  
+    Args:  
+        text (str): входная строка  
+          
+    Returns:  
+        str: строка удвоенными символами  
+    """  
+    result = ''  
+    for char in text:  
+        result += char * 2  
+    return result  
+print(double('строка'))  
+
+Задание 5
+
+
+def calculate_sets(details, people_figs, cars, trees):
+    """
+    details (int):
+    people_figs (int):
+    cars (int):
+    trees (int):
+    int: 
+    """
+    sets_from_details = details // 72
+    sets_from_people = people_figs // 4
+    sets_from_cars = cars // 2
+    sets_from_trees = trees // 7
+    max_possible_sets = min(sets_from_details, sets_from_people, sets_from_cars, sets_from_trees)
+
+    return max_possible_sets
+total_details = 500
+total_people_figs = 30
+total_cars = 10
+total_trees = 60
+result = calculate_sets(total_details, total_people_figs, total_cars, total_trees)
+print(f"Можно собрать полных наборов: {result}")
