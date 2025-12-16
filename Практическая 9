@@ -1,23 +1,52 @@
-Задание 1
+notebook = {}
+def create_note():
+    global notebook
+    header = input("Header: ")
+    text = input("Text: ")
+    notebook[header] = text
+    print("Заметка успешно создана.")
 
-notebook = {}  
-def add_note():    
-    note_title = input("Введите название заметки: ")    
-    if note_title in notebook:  
-        print("Заметка таким названием уже существует!")  
-        return   
-    note_content = input("Введите текст заметки: ")  
-    notebook[note_title] = note_content  
-    print("Заметка успешно добавлена!")    
-if __name__ == "__main__":  
-    while True:  
-        print("Меню:")  
-        print("1. Добавить заметку")  
-        print("2. Выйти")  
-        choice = input("Выберите действие: ")  
-        if choice == '1':  
-            add_note()  
-        elif choice == '2':  
-            break  
-        else:  
-            print("Неверный выбор. Попробуйте снова.")
+def read_notes():
+    global notebook
+    if not notebook:
+        print("Заметок нет.")
+        return
+    print(", ".join(notebook.keys()))
+    choice = input("Which note to read?\n> ")
+    if choice in notebook:
+        print(notebook[choice])
+    else:
+        print("Такой заметки нет.")
+
+def delete_note():
+    global notebook
+    if not notebook:
+        print("Заметок нет.")
+        return
+
+    print(", ".join(notebook.keys()))
+    choice = input("Which note to delete?\n> ")
+
+    if choice in notebook:
+        notebook.pop(choice)
+        print(f"Note {choice} removed")
+    else:
+        print("Такой заметки нет.")
+def menu():
+    while True:
+        print("\n[1] - Create a new note. [2] - Read all notes. [3] - Delete entry. [4] - Exit.")
+        choice = input("> ")
+        if choice == '1':
+            create_note()
+        elif choice == '2':
+            read_notes()
+        elif choice == '3':
+            delete_note()
+        elif choice == '4':
+            print("Программа завершена.")
+            break
+        else:
+            print("Неверный ввод, попробуйте снова.")
+if __name__ == "__main__":
+    menu()
+
