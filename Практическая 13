@@ -1,1 +1,15 @@
+#Задание 1
+
+def alpha(input_string):    
+    alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'  
+    used_chars = set()   
+    for char in input_string:  
+        if char in alphabet:  
+            used_chars.add(char)  
+    result = ''.join(sorted(used_chars, key=lambda x: alphabet.index(x)))  
+    remaining = [char for char in alphabet if char not in used_chars]   
+    return result + ''.join(remaining)   
+print(alpha('пайтон'))
+
+#Задание 2
 
