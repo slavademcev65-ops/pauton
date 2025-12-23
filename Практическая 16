@@ -1,0 +1,29 @@
+#Задание 1
+
+import random  
+def main():  
+    print("Начинаем игру. Повороты: [a]-Налево, [w]-Прямо, [d]-Направо")  
+    turns = 0 
+    found_exit = False  
+    while not found_exit:  
+        move = input("Куда идти? ").strip().lower()  
+          
+        if move == 'a':  
+            turns += 1  
+            print("Повернул налево. Выхода пока нет... ")  
+        elif move == 'w':  
+            turns += 1  
+            print("Пошёл прямо. Выхода пока нет... ")  
+        elif move == 'd':  
+            turns += 1  
+            print("Повернул направо. Выхода пока нет... ")  
+        else:  
+            print("Неверный ввод! Используйте [a], [w] или [d]")  
+            continue  
+        if random.randint(1, 10) == 1:  
+            found_exit = True  
+      
+    print(f"Выход найден! Ты выиграл! ВСЕГО сделано {turns} поворотов.")  
+  
+if __name__ == "__main__":  
+    main()  
